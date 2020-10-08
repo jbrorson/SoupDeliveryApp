@@ -24,3 +24,8 @@ export const ShopWrap = styled.div`
     font-weight: bold;
   }
 `;
+
+
+// om jag vill byta ut input-knapp till en ikon: 
+// import { IconName } from "react-icons/gr";
+// GrAddCircle

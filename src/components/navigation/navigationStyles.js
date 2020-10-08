@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
-const media = {
-  desktop: '@media(min-width: 1000px)'
-}
+// const media = {
+//   desktop: '@media(min-width: 1000px)'
+// }
 
 export const NavStyles = styled.div`
   width: 100%; 
   display: flex;
-  justify-content: flex-end; 
-  align-items: center;
+  /* justify-content: space-around; */
+  align-items: center; 
   background-color: #32936F; 
   height: 80px;
   position: sticky; 
@@ -16,26 +16,38 @@ export const NavStyles = styled.div`
   bottom: 0;
   padding: 0 auto;
 
-`;
+  ul{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+  }
 
-export const NavIcons = styled.div`
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  border-top: 2px solid darkgreen;
-  color: white;
-`;
-      
-export const Icons = styled.li`
-  width: 40px;
-  margin: 1em;
-  padding: 1.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50%;
-  /* border: 1px solid; */
-  color: #fff;
+  li{
+    height: 100%;
+    color: whitesmoke;
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column nowrap;
+    margin: 10px; 
+    padding: 10px;
+  }
+
+  svg{
+    height: 30px;
+    width: 30px;
+  }
+
+  a{
+    color: whitesmoke;
+  }
+
+  a:hover{
+    font-size:1.8rem;
+    /* transition: 1s ease-in; */
+  }
 `;
