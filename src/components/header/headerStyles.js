@@ -11,7 +11,7 @@ export const HeaderWrap = styled.div`
   padding: 10px;
   width: 100%; 
   /* border: 5px solid blue;  */
-  background-color: #E8E6E6; 
+  background-color: ##E8E6E6; 
   border-bottom: 1px solid black;
   display: flex; 
   /* justify-content: flex-start; */

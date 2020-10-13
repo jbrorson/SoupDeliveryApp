@@ -9,6 +9,7 @@ import Navigation from './components/navigation/navigation';
 // import Shop from './components/shop/shop';
 import {CartBox, } from './appStyles';
 import { NavIcon } from './components/header/headerStyles';
+import SoupCard from './components/content/soupCard';
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
                 </ul>
               </CartBox> */}
             <Header />
-          <Content />
+          <Content>
+          <SoupCard />
+          </Content>
         <Navigation />
       </AppWrap>
     </Router>

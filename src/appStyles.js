@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 export const AppWrap = styled.div`
   height: 1000px; 
-  /* border: 5px solid red;  */
+  background-color: #E8E6E6;
   display: flex; 
   flex-flow: column nowrap;
   justify-content: center; 

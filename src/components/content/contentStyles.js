@@ -5,22 +5,19 @@ const media = {
 }
 
 export const ContentWrap = styled.div`
- margin-top: 6rem;
-  height: 100%;
+  margin-top: 4rem;
+  height: 90%;
   width: 100%; 
-  margin-bottom: 10px;
-  padding: 0;
-  /* border: 5px solid green;  */
   display: flex; 
-  flex-flow: column nowrap;
   justify-content: center; 
   align-items: center; 
+  background-color: #E8E6E6;
 
   ${media.desktop} {
-    width: 1000px; 
+    width: 400px; 
   }
 
-  h3 {
+  /* h3 {
     font-size: 20px; 
     font-weight: bold; 
     color: black;
@@ -29,7 +26,6 @@ export const ContentWrap = styled.div`
 
   .boxWrap {
     width: 88%; 
-    /* border: 5px solid yellow; */
     height: 100%;
 
     ${media.desktop} {
@@ -62,5 +58,5 @@ export const ContentWrap = styled.div`
         width: 48%;
       }
     }
-  }
+  } */
 `;
