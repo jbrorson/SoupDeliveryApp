@@ -11,8 +11,9 @@ export const AppWrap = styled.div`
   flex-flow: column nowrap;
   justify-content: center; 
   align-items: center; 
+  margin: 0;
 
-  li{
+  /* li{
     list-style: none;
     display: flex;
     align-items: center; 
@@ -20,14 +21,14 @@ export const AppWrap = styled.div`
   a{
     color: black;
     text-decoration: none;
-  }
+  } */
 `;
 
-export const CartBox = styled.div`
-  position: relative;
-  width: 400px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  box-shadow: 2px 0px 5px black;
-`;
+// export const CartBox = styled.div`
+//   position: relative;
+//   width: 400px;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   box-shadow: 2px 0px 5px black;
+// `;

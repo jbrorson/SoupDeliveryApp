@@ -2,7 +2,7 @@ import React from 'react';
 import SoupCard from './soupCard';
 import { ContentWrap } from './contentStyles';
 
-function Content(){
+function Content() {
   return (
     <ContentWrap>
       <SoupCard />

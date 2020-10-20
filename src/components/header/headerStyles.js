@@ -1,44 +1,46 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { FaShoppingCart } from 'react-icons/fa';
 
+// import { Link } from 'react-router-dom';
 
-export const HeaderWrap = styled.div`
-  height: 80px;
+import styled from 'styled-components'
+import { ShoppingBag } from '@styled-icons/boxicons-regular/ShoppingBag';
+
+export const HeaderWrap = styled.header`
+  height: 90px;
   position: fixed; 
   top: 0;
   margin-top: 0;
-  padding: 10px;
   width: 100%; 
-  /* border: 5px solid blue;  */
-  background-color: ##E8E6E6; 
-  border-bottom: 1px solid black;
+  background-color: #E8E6E6; 
+  border-bottom: 1px solid #C4C4C4;
   display: flex; 
-  /* justify-content: flex-start; */
   align-items: center;
+  justify-content: space-between;
 `;
 
-export const NavIcon = styled(FaShoppingCart)`
-  justify-self: flex-start;
+export const NavIcon = styled(ShoppingBag)`
   cursor: pointer; 
   color: black;
-  font-size: 1.8rem;
-  text-decoration: none;
+  height: 35px;
+  width: 35px;
   display: flex; 
-  align-items: center;
-  margin: 1rem 1rem 0; 
+  align-items: center; 
+  margin-left: 25px;
 
   @media screen and (max-width: 470px) {
     font-size: 1.5em;
   }
 `;
 
-export const NavLogo = styled(Link)`
-  color: #fff;
-  /* justify-self: flex-start; */
-  margin-right: 0.5rem;
-  cursor: pointer; 
-`;
+export const HeaderAmmount = styled.h4`
+  color: black;  
+  margin-right: 25px;
+`
+
+// export const NavLogo = styled(Link)`
+//   color: #fff;
+//   margin-right: 0.5rem;
+//   cursor: pointer; 
+// `;
 
 // DropDown meny när klickar på kundvagn i header
 //Lägg cartbox här om inte funkar i appstyles

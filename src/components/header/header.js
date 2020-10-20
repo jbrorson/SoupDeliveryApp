@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
-import { HeaderWrap, NavIcon} from './headerStyles';
+import React /*{ useState }*/ from 'react';
+import { HeaderWrap, NavIcon, HeaderAmmount } from './headerStyles';
+import { Route } from 'react-router-dom';
 // import Shop from '../shop/shop';
+// import { ShoppingBag } from '@styled-icons/boxicons-regular';
 
 const Header = props => (
   <HeaderWrap>
     {/* <CartBox> */}
-      <ul className="HeaderLinks">
-        <NavIcon />
+    <NavIcon />
+    <HeaderAmmount>Summa: 0 kr</HeaderAmmount>
+      {/* <a href=""><ShoppingBag /></a> */}
+      {/* <ul className="HeaderLinks">
         <li><a href="/">Kundvagn</a></li>
-      </ul>
+      </ul> */}
     {/* </CartBox> */}
   </HeaderWrap>
 )
