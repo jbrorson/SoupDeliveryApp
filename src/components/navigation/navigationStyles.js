@@ -1,20 +1,24 @@
 import styled from 'styled-components';
 
-// const media = {
-//   desktop: '@media(min-width: 1000px)'
-// }
+const media = {
+  desktop: '@media(min-width: 1000px)'
+}
 
 export const NavStyles = styled.div`
   width: 100%; 
   display: flex;
-  /* justify-content: space-around; */
   align-items: center; 
   background-color: #32936F; 
-  height: 80px;
-  position: sticky; 
+  height: 60px;
+  position: fixed; 
   margin-bottom: 0 auto;
   bottom: 0;
   padding: 0 auto;
+
+  ${media.desktop} {
+      height: 80px;
+      margin: 10px 10px;
+    }
 
   ul{
     height: 100%;
@@ -24,7 +28,7 @@ export const NavStyles = styled.div`
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-  }
+    }
 
   li{
     height: 100%;
@@ -33,21 +37,25 @@ export const NavStyles = styled.div`
     align-items: center;
     justify-content: space-evenly;
     flex-flow: column nowrap;
-    margin: 10px; 
-    padding: 10px;
+    margin: 5px; 
+    padding: 5px;
   }
 
   svg{
     height: 30px;
     width: 30px;
+
+      ${media.desktop} {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   a{
     color: whitesmoke;
   }
 
-  a:hover{
+  /* a:hover{
     font-size:1.8rem;
-    /* transition: 1s ease-in; */
-  }
+  } */
 `;
