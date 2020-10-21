@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShopWrap } from '../components/shop/shopStyles';
+import uuid from 'react-uuid';
 
 const Cart = () => {
 
@@ -7,16 +8,16 @@ const Cart = () => {
   console.log(cart);
   const items = [
     {
-      id: 1, name: 'Tomatsoppa', price: 90
+      id: uuid(), name: 'Tomatsoppa', price: 90
     },
     {
-      id: 2, name: 'Skärgårdssoppa', price: 95
+      id: uuid(), name: 'Skärgårdssoppa', price: 95
     },
     {
-      id: 3, name: 'Potatis -och purjolökssoppa', price: 80
+      id: uuid(), name: 'Potatis -och purjolökssoppa', price: 80
     },
     {
-      id: 4, name: 'Linssoppa', price: 80
+      id: uuid(), name: 'Linssoppa', price: 80
     },
   ];
 
