@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShopWrap } from '../components/shop/shopStyles';
+import { ShopWrap, CartCard, CartItems, CartHeading, CartBtn } from '../components/shop/shopStyles';
 import uuid from 'react-uuid';
 
 const Cart = () => {
@@ -47,12 +47,14 @@ const Cart = () => {
 
   return (
     <ShopWrap>
-      <h1>Soppmeny:</h1>
-      <div>{listItems}</div>
-      <p>Din kundvagn innehåller: ({cart.length})st soppor</p>
-      <div>{cartItems}</div>
+      <CartCard>
+        <CartHeading>Din kundvagn</CartHeading>
+        <CartItems>{listItems}</CartItems>
+        <p>Din kundvagn innehåller: ({cart.length})st soppor</p>
+        <CartItems>{cartItems}</CartItems>
+        <button>Till kassa</button><button>Tillbaka till meny</button>
+      </CartCard>
     </ShopWrap>
-
   )
 };
 

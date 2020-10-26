@@ -1,10 +1,13 @@
 import React from 'react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred } from './ingredientsStyle';
-import { ContentWrap } from './contentStyles';
-// import { ReactComponent as IngredientsIcon } from '../../Icons/ingredients.svg';
-import IngredientsIcon from '../../Icons/ingredients.svg';
+// import { ContentWrap } from './contentStyles';
+
+// import IngredientsIcon from '../../Icons/ingredients.svg';
 
 const Ingredients = () => (
+
   <IngredientsWrap>
     <div>
       <SoupImg src="https://imengine.public.prod.ksf.infomaker.io/imengine/image.php?uuid=5c96b398-cc73-4395-ac58-ce2b83dfa382&type=preview&source=5c96b398-cc73-4395-ac58-ce2b83dfa382&function=hardcrop&width=800&height=564&q=80"></SoupImg>

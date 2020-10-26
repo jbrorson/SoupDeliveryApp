@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  /* height: 100vh; */
   z-index: 1;
   width: 100%;
   max-width: 1300px; 

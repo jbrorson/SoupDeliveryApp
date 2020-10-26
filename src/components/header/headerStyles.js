@@ -8,7 +8,6 @@ export const HeaderWrap = styled.header`
   height: 90px;
   position: fixed; 
   top: 0;
-  margin-top: 0;
   width: 100%; 
   background-color: #E8E6E6; 
   border-bottom: 1px solid #C4C4C4;

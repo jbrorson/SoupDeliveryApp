@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShopWrap } from './shopStyles';
+import { ShopWrap, CartHeading } from './shopStyles';
 
 const Shop = () => {
 
@@ -7,16 +7,16 @@ const Shop = () => {
   console.log(cart);
   const items = [
     {
-      id: 1, name:'Tomatsoppa', price: 90
+      id: 1, name: 'Tomatsoppa', price: 90
     },
     {
-      id: 2, name:'Skärgårdssoppa', price: 95
-    }, 
+      id: 2, name: 'Skärgårdssoppa', price: 95
+    },
     {
-      id: 3, name:'Potatis -och purjolökssoppa', price: 80
-    }, 
+      id: 3, name: 'Potatis -och purjolökssoppa', price: 80
+    },
     {
-      id: 4, name:'Linssoppa', price: 80
+      id: 4, name: 'Linssoppa', price: 80
     },
   ];
 
@@ -25,7 +25,7 @@ const Shop = () => {
   };
 
   const removeFromCart = (el) => {
-    let hardCopy =[...cart]
+    let hardCopy = [...cart]
     hardCopy = hardCopy.filter(cartItem => cartItem.id !== el.id)
     setCart(hardCopy);
   }
@@ -33,25 +33,32 @@ const Shop = () => {
   const listItems = items.map(el => (
     <div key={el.id}>
       {`${el.name}: ${el.price}kr`}
-      <input type='submit' value='+' onClick={()=>addToCart(el)} />
+      <input type='submit' value='+' onClick={() => addToCart(el)} />
     </div>
   ));
 
   const cartItems = cart.map(el => (
     <div key={el.id}>
       {`${el.name}: ${el.price}kr`}
-      <input type='submit' value='-' onClick={()=>removeFromCart(el)} />
+      {/* <img
+        className="foodImage"
+        src={`/images/${el.image}.jpg`}
+        alt={el.image}
+      /> */}
+      <input type='submit' value='-' onClick={() => removeFromCart(el)} />
     </div>
   ));
 
   return (
     <ShopWrap>
-      <h1>Soppmeny:</h1>
+
+      <CartHeading>Soppmeny:</CartHeading>
       <div>{listItems}</div>
       <p>Din kundvagn innehåller: ({cart.length})st soppor</p>
       <div>{cartItems}</div>
     </ShopWrap>
-    
-)}; 
+
+  )
+};
 
 export default Shop;

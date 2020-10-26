@@ -5,18 +5,14 @@ const media = {
 }
 
 export const SoupWrap = styled.div`
-  /* position: absolute; */
   width: 320px;
-  height: 440px;
+  height: 450px;
   left: 0px;
   top: 0px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-
-  ${media.desktop} {
-    width: 450px;
-  }
+  margin: 100px 20px;
 `;
 
 export const ImgHolder = styled.div`
@@ -27,28 +23,21 @@ export const ImgHolder = styled.div`
 `;
 
 export const SoupPhoto = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 85%;
+  height: 180px;
   margin: 20px;
   border-radius: 7px;
-`;
-
-export const InfoSection = styled.section`
-  height: 80px; 
-  margin-top: 10px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  border-bottom: 2px solid #E5E5E5;
 
   ${media.desktop} {
-    justify-content: center;
+    width: 80%;
   }
 `;
 
 export const Title = styled.h2`
   font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
 
   ${media.desktop} {
     margin: 0 20px;
@@ -59,10 +48,11 @@ export const InfoButton = styled.button`
   height: 30px; 
   width: 30px;
   border-radius: 50%;
-  border: 0;
+  /* border: 0; */
   background-color: #fff;
   font-size: 18px;
   border: 1.5px solid #000000;
+  margin-right: 20px;
 
   ${media.desktop} {
     height: 40px;
@@ -70,15 +60,29 @@ export const InfoButton = styled.button`
   }
 `;
 
+
+export const InfoSection = styled.section`
+  height: 80px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #E5E5E5;
+
+  ${media.desktop} {
+    justify-content: center;
+  }
+`;
+
+
 export const Info = styled.p`
-  color: black;
-  margin-left: 30px;
+  margin-left: 20px;
   font-weight: 200;
 `;
 
 export const ButtonAddOne = styled.button`
-  width: 47px;
-  height: 35px; 
+  width: 65px;
+  height: 45px;
+  font-size: 20px; 
   background-color: #32936F;
   border-radius: 4px;
   color: #fff;
@@ -98,8 +102,7 @@ export const PriceSection = styled.div`
   }
 `;
 
-export const Price = styled.h3`
-  color: black;
+export const Price = styled.h2`
   margin-left: 10px;
   font-weight: bold;
 `;

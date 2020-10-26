@@ -1,7 +1,17 @@
 import React from 'react';
+import { PageWrap, PageCard, PageHeading } from './PageStyles';
 
 const Order = () => {
-  return <h1>Follow Order</h1>
+  return (
+
+    <PageWrap>
+      <PageCard>
+        <PageHeading>Följ Order</PageHeading>
+        <p>Lägg till karta</p>
+      </PageCard>
+    </PageWrap>
+
+  )
 };
 
 export default Order;

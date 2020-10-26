@@ -19,34 +19,50 @@ import Cart from './pages/Cart';
 import Order from './pages/Order';
 // import { Menu } from 'styled-icons/boxicons-regular';
 
+import Soups from './components/Soups';
 
 
 function App() {
   return (
+    <Router>
+      <AppWrap>
+        <GlobalStyle />
+        <Header />
+        {/* <Menu /> */}
+
+        <Switch>
+          <Route path="/menu" component={Menu} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/support" component={Support} />
+          <Route path="/order" component={Order} />
+        </Switch>
+        <Navigation />
+      </AppWrap>
+    </Router>
     // <AppWrap>
     //   <DeliveryInfo />
     // </AppWrap>
     // <Ingredients />
     // <Shop />
-    <Router>
-      <div>
-        <GlobalStyle />
-        <AppWrap>
-          <Header />
-          {/* <Content>
-            <SoupCard />
-          </Content> */}
+    // <Router>
+    //   <div>
+    //     <GlobalStyle />
+    //     <AppWrap>
+    //       <Header />
+    /* <Content>
+        <SoupCard />
+      </Content> */
 
-          <Switch>
-            <Route path="/soupCard" component={SoupCard} />
-            <Route path="/cart" component={Cart} />
-            <Route path="/support" component={Support} />
-            <Route path="/order" component={Order} />
-          </Switch>
-          <Navigation />
-        </AppWrap>
-      </div>
-    </Router>
+    //       <Switch>
+    //         <Route path="/menu" component={Menu} />
+    //         <Route path="/cart" component={Cart} />
+    //         <Route path="/support" component={Support} />
+    //         <Route path="/order" component={Order} />
+    //       </Switch>
+    //       <Navigation />
+    //     </AppWrap>
+    //   </div>
+    // </Router>
   );
 }
 

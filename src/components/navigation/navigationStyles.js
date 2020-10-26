@@ -14,6 +14,7 @@ export const NavStyles = styled.div`
   margin-bottom: 0 auto;
   bottom: 0;
   padding: 0 auto;
+  margin-top: 80px;
 
   ${media.desktop} {
       height: 80px;
@@ -54,8 +55,4 @@ export const NavStyles = styled.div`
   a{
     color: whitesmoke;
   }
-
-  /* a:hover{
-    font-size:1.8rem;
-  } */
 `;
