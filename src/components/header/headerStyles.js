@@ -1,6 +1,3 @@
-
-// import { Link } from 'react-router-dom';
-
 import styled from 'styled-components'
 import { ShoppingBag } from '@styled-icons/boxicons-regular/ShoppingBag';
 
@@ -23,7 +20,6 @@ export const NavIcon = styled(ShoppingBag)`
   width: 35px;
   display: flex; 
   align-items: center; 
-  margin-left: 25px;
 
   @media screen and (max-width: 470px) {
     font-size: 1.5em;
@@ -34,17 +30,15 @@ export const HeaderAmmount = styled.h4`
   color: black;  
   margin-right: 25px;
 `
+export const ItemAmmount = styled.p`
+  font-weight: bold;
+  width: 50%;
+`;
 
-// export const NavLogo = styled(Link)`
-//   color: #fff;
-//   margin-right: 0.5rem;
-//   cursor: pointer; 
-// `;
-
-// DropDown meny när klickar på kundvagn i header
-//Lägg cartbox här om inte funkar i appstyles
-
-
-// export const NavIcon = styled(FaShoppingCart)`
-//   margin-right: 0.5rem;
-// `;
+export const HeaderCart = styled.section`
+  height: 100%;
+  width: 50%;
+  display: flex; 
+  justify-content: center;
+  padding: 20px;
+`;

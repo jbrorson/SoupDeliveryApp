@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { HeaderWrap, NavIcon, HeaderAmmount } from './headerStyles';
+import { HeaderWrap, NavIcon, HeaderAmmount, ItemAmmount, HeaderCart } from './headerStyles';
 import { CartContext } from '../../pages/CartContext';
 import { SoupContext } from '../Soups/SoupContext';
 // import { Route } from 'react-router-dom';
@@ -13,8 +13,10 @@ const Header = () => {
 
   return (
     <HeaderWrap>
-      <NavIcon />
-      <p>{cart.length}</p>
+      <HeaderCart>
+        <NavIcon />
+        <ItemAmmount>{cart.length}</ItemAmmount>
+      </HeaderCart>
       <HeaderAmmount>Summa: {totalPrice}</HeaderAmmount>
     </HeaderWrap>
   )

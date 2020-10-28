@@ -35,6 +35,7 @@ function App() {
         <GlobalStyle />
         <CartProvider>
           <SoupProvider>
+
             <Header />
             <SoupList />
             {/* <Switch>
