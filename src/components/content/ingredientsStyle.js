@@ -9,7 +9,6 @@ export const IngredientsWrap = styled.div`
   width: 100%;
   background: #E8E6E6;
   margin: 20px;
-  border: 2px solid pink;
 
   ${media.desktop} {
     width: 50%;    
@@ -19,11 +18,12 @@ export const IngredientsWrap = styled.div`
 // img tar upp 100% av width och kan därför inte få till ordentligt 
 export const SoupImg = styled.img`
   height: 200px;
-  width: 90%;
+  width: 100%;
   border-radius: 7px; 
   margin: 0;
 
   ${media.desktop} {
+    width: 90%;
     margin: 20px;
   }
 `;
