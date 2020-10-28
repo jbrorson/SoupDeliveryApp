@@ -1,32 +1,35 @@
 import styled from 'styled-components';
 
 const media = {
-  desktop: '@media(min-width: 1000px)'
+  desktop: '@media(min-width: 600px)'
 }
 
 export const IngredientsWrap = styled.div`
   height: 100%;
   width: 100%;
-  /* margin-top: 50px; */
   background: #E8E6E6;
-  padding: 0;
+  margin: 20px;
+  border: 2px solid pink;
 
   ${media.desktop} {
-    display: flex; 
-    justify-content: flex-start;
+    width: 50%;    
   }
 `;
 
+// img tar upp 100% av width och kan därför inte få till ordentligt 
 export const SoupImg = styled.img`
-  width: 320px;
   height: 200px;
-  margin: 20px 0 0 20px;
+  width: 90%;
   border-radius: 7px; 
+  margin: 0;
+
+  ${media.desktop} {
+    margin: 20px;
+  }
 `;
 
 export const SoupInfo = styled.div`
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
-  height: 85%;
+  height: 180px;
   width: 100%;
   display: flex;
   align-items: space-evenly;
@@ -40,9 +43,26 @@ export const Dish = styled.h2`
   border-bottom: 1px solid #C4C4C4;
   font-weight: 700;
   display: flex; 
-  justify-content: center;
-  margin: 20px 0 20px 0;
-  padding: 0 0 20px 0;
+  justify-content: space-around;
+  padding: 15px;
+
+  ${media.desktop} {
+    justify-content: center;
+  }
+`;
+
+export const GoBackBtn = styled.button`
+  background-color: #fefefe; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  border: none;
+  height: 40px;
+  width: 40px; 
+  font-size: 20px; 
+
+  ${media.desktop} {
+    margin-left: 20px;
+  }
 `;
 
 export const DishIncludes = styled.h4`
@@ -51,6 +71,7 @@ export const DishIncludes = styled.h4`
   display: flex; 
   justify-content: center;
   margin-top: auto;
+  padding: 10px;
 `;
 
 export const DishPrice = styled.h3`
@@ -59,11 +80,12 @@ export const DishPrice = styled.h3`
   display: flex; 
   justify-content: center;
   margin: 0;
+  padding: 10px;
 `;
 
 export const InfoCard = styled.div`
-  height: 170px;
-  margin-top: 15px;
+  height: 190px;
+  padding: 15px 0;
   width: 100%;
   display: flex; 
   align-items: center;
@@ -85,7 +107,7 @@ export const IngredientBox = styled.div`
 
 export const NutritionBox = styled.div`
   width: 115px;
-  height: 157px;
+  height: 100%;
   background-color: #fefefe; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
@@ -103,16 +125,15 @@ export const TotalIngred = styled.p`
 `;
 
 export const ContactKitchen = styled.div`
-  width: 295px;
+  width: 100%;
   height: 100px;
   background-color: #fefefe;   
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
   justify-content: center;
-  padding: 10px;
+  padding: 10px 0;
+  margin-top: 10px;
   border-radius: 15px;
-  margin-top: 20px;
-  margin-left: 20px;
 `;
 
 export const ButtonArea = styled.div`

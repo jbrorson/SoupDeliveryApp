@@ -2,23 +2,22 @@ import React from 'react';
 import { useLocation } from 'react-router';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred } from './ingredientsStyle';
+import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred, GoBackBtn } from './ingredientsStyle';
 // import { ContentWrap } from './contentStyles';
 
 // import IngredientsIcon from '../../Icons/ingredients.svg';
 
-function Ingredients() {
-  const location = useLocation();
-  console.log(location);
-}
+const Ingredients = () => {
 
-return (
-  <div>
-    <IngredientsWrap>
-      <div>
+  return (
+    <>
+      <IngredientsWrap>
+        {/* <SoupImg>EN FRÄCK BILD</SoupImg> */}
         <SoupImg src="https://imengine.public.prod.ksf.infomaker.io/imengine/image.php?uuid=5c96b398-cc73-4395-ac58-ce2b83dfa382&type=preview&source=5c96b398-cc73-4395-ac58-ce2b83dfa382&function=hardcrop&width=800&height=564&q=80"></SoupImg>
         <SoupInfo>
-          <Dish>Tomatsoppa</Dish>
+          <Dish>Tomatsoppa
+          <GoBackBtn>X</GoBackBtn>
+          </Dish>
           <DishIncludes>Hög proteinhalt</DishIncludes>
           <DishPrice>Pris: 80 kr</DishPrice>
         </SoupInfo>
@@ -41,9 +40,9 @@ return (
           </NutritionBox>
         </InfoCard>
         <ContactKitchen>Kontakta köket</ContactKitchen>
-      </div>
-    </IngredientsWrap>
-  </div>
-);
+      </IngredientsWrap>
+    </>
+  )
+};
 
 export default Ingredients;
