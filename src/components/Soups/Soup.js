@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { CartContext } from '../../pages/CartContext';
+// import history from "../History";
+
 import {
   SoupWrap,
   SoupPhoto,
@@ -14,10 +18,20 @@ import {
 } from '../content/soupCardStyles';
 
 const Soup = (props) => {
+  const [cart, setCart] = useContext(CartContext);
+  const addToCart = () => {
+    const soup = { name: props.name, info: props.info, time: props.time, price: props.price };
+    setCart(curr => [...curr, soup]);
+  }
+
+
+  // const ShowIngredients = () => {
+  //   history.push("/ingredients");
+  // };
 
 
   return (
-    <>
+    <Router>
       <SoupWrap>
         <div>
           <ImgHolder>
@@ -25,11 +39,11 @@ const Soup = (props) => {
           </ImgHolder>
           <InfoSection>
             <Title>{props.name}</Title>
-            <InfoButton>i</InfoButton>
+            <InfoButton type="button">i</InfoButton>
           </InfoSection>
           <InfoSection>
             <Info>{props.info}</Info>
-            <ButtonAddOne>+1</ButtonAddOne>
+            <ButtonAddOne type="button" onClick={addToCart}>+1</ButtonAddOne>
           </InfoSection>
           <PriceSection>
             <DeliveryInfo>{props.time}</DeliveryInfo>
@@ -37,7 +51,7 @@ const Soup = (props) => {
           </PriceSection>
         </div>
       </SoupWrap>
-    </>
+    </Router>
   )
 };
 

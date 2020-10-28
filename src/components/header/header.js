@@ -1,34 +1,23 @@
-import React /*{ useState }*/ from 'react';
+import React, { useContext } from 'react';
 import { HeaderWrap, NavIcon, HeaderAmmount } from './headerStyles';
-import { Route } from 'react-router-dom';
+import { CartContext } from '../../pages/CartContext';
+import { SoupContext } from '../Soups/SoupContext';
+// import { Route } from 'react-router-dom';
 // import Shop from '../shop/shop';
 // import { ShoppingBag } from '@styled-icons/boxicons-regular';
 
-const Header = () => (
-  <HeaderWrap>
-    {/* <CartBox> */}
-    <NavIcon />
-    <HeaderAmmount>Summa: 0 kr</HeaderAmmount>
-    {/* <a href=""><ShoppingBag /></a> */}
-    {/* <ul className="HeaderLinks">
-        <li><a href="/">Kundvagn</a></li>
-      </ul> */}
-    {/* </CartBox> */}
-  </HeaderWrap>
-)
-// const [click, setClick] = useState(false);
+const Header = () => {
+  const [cart, setCart] = useContext(CartContext);
+  const totalPrice = cart.reduce(
+    (prevValue, currentValue) => prevValue + currentValue.price, 0);
 
-// const handleClick = () => setClick(!click);
-
-
-// return (
-//   <HeaderWrap>
-{/* <NavIcon onClick={handleClick}>
-        {click ? <Shop /> : !true}; */}
-// <CartBox />
-{/* </NavIcon> */ }
-//     </HeaderWrap>
-//   )
-// }
+  return (
+    <HeaderWrap>
+      <NavIcon />
+      <p>{cart.length}</p>
+      <HeaderAmmount>Summa: {totalPrice}</HeaderAmmount>
+    </HeaderWrap>
+  )
+};
 
 export default Header; 

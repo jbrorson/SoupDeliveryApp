@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShopWrap, CartHeading } from './shopStyles';
+import { ShopWrap, CartHeading } from './CartStyles';
 
 const Shop = () => {
 

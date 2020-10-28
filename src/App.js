@@ -1,69 +1,55 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import GlobalStyle from './globalStyles';
+import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
 
+import GlobalStyle from './globalStyles';
 import { AppWrap } from './appStyles';
 import Header from './components/header/header';
-import Content from './components/content/content';
 import Navigation from './components/navigation/navigation';
-// import Shop from './components/shop/shop';
-import { CartBox, } from './appStyles';
-import { NavIcon } from './components/header/headerStyles';
-import SoupCard from './components/content/soupCard';
-import Ingredients from './components/content/ingredients';
-import DeliveryInfo from './components/delivery/deliveryInfo';
-
 import Menu from './pages/Menu';
 import Support from './pages/Support';
-import Cart from './pages/Cart';
+import { Cart } from './pages/Cart';
 import Order from './pages/Order';
-// import { Menu } from 'styled-icons/boxicons-regular';
-
-import Soups from './components/Soups';
-
+// import Soup from './components/Soups/Soup';
+import { CartProvider } from './pages/CartContext';
+import { SoupProvider } from './components/Soups/SoupContext';
+import SoupList from './components/Soups/SoupList';
+// import Ingredients from './components/content/ingredients';
 
 function App() {
+  // const history = useHistory();
+
+  // const handleClick = name => {
+  //   history.push(`"/ingredients"`);
+  // };
+  // return (
+  //   <div>
+  //     <h1>hello</h1>
+  //     <h2>denna skiten suger så jävla hårt</h2>
+  //     <button onClick={() => handleClick("Denna component bör flyttas")}>To about</button>
+  //   </div>);
+
   return (
+
     <Router>
       <AppWrap>
         <GlobalStyle />
-        <Header />
-        {/* <Menu /> */}
-
-        <Switch>
-          <Route path="/menu" component={Menu} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/support" component={Support} />
-          <Route path="/order" component={Order} />
-        </Switch>
-        <Navigation />
+        <CartProvider>
+          <SoupProvider>
+            <Header />
+            <SoupList />
+            {/* <Switch>
+              <Route path="/menu" component={Menu} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/support" component={Support} />
+              <Route path="/order" component={Order} />
+            </Switch> */}
+            <Navigation />
+          </SoupProvider>
+        </CartProvider>
       </AppWrap>
     </Router>
-    // <AppWrap>
-    //   <DeliveryInfo />
-    // </AppWrap>
-    // <Ingredients />
-    // <Shop />
-    // <Router>
-    //   <div>
-    //     <GlobalStyle />
-    //     <AppWrap>
-    //       <Header />
-    /* <Content>
-        <SoupCard />
-      </Content> */
-
-    //       <Switch>
-    //         <Route path="/menu" component={Menu} />
-    //         <Route path="/cart" component={Cart} />
-    //         <Route path="/support" component={Support} />
-    //         <Route path="/order" component={Order} />
-    //       </Switch>
-    //       <Navigation />
-    //     </AppWrap>
-    //   </div>
-    // </Router>
   );
 }
+
 
 export default App;

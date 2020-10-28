@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { ShopWrap, CartCard, CartItems, CartHeading, CartBtn } from '../components/shop/shopStyles';
+import React, { useState } from 'react';
+import { CartWrap, CartCard, CartItems, CartHeading, CartBtn } from '../components/shop/CartStyles';
 import uuid from 'react-uuid';
+import { CartContext } from './CartContext';
 
-const Cart = () => {
-
+export const Cart = () => {
   const [cart, setCart] = useState([]);
-  console.log(cart);
   const items = [
     {
       id: uuid(), name: 'Tomatsoppa', price: 90
@@ -46,15 +45,16 @@ const Cart = () => {
   ));
 
   return (
-    <ShopWrap>
+    <CartWrap>
       <CartCard>
         <CartHeading>Din kundvagn</CartHeading>
         <CartItems>{listItems}</CartItems>
         <p>Din kundvagn innehåller: ({cart.length})st soppor</p>
         <CartItems>{cartItems}</CartItems>
-        <button>Till kassa</button><button>Tillbaka till meny</button>
+        <CartBtn>Till kassa</CartBtn>
+        <CartBtn>Tillbaka till meny</CartBtn>
       </CartCard>
-    </ShopWrap>
+    </CartWrap>
   )
 };
 

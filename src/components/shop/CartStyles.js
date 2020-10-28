@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ShopWrap = styled.div`
+export const CartWrap = styled.div`
   height: 100vh; 
   width: 100%;
   padding: 25px;
@@ -28,7 +28,7 @@ export const CartItems = styled.div`
   margin-left: 20px;
 `;
 
-export const CartBtn = styled.input`
+export const CartBtn = styled.button`
   width: 30px;
   height: 30px;
   /* font-size: 20px;  */
