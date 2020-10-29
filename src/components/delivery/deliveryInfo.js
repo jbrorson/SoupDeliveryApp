@@ -25,7 +25,7 @@ function DeliveryInfo() {
       </div>
 
       <TimeSection>
-        <InputInfo>Välj leveransdag/tid*</InputInfo>
+        <h4>Välj leveransdag/tid*</h4>
         <TimeBox>
           <ChoseTime>Snarast</ChoseTime>
           <Check type="checkbox"></Check>

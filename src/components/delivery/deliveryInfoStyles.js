@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const DeliveryWrap = styled.div`
-  margin: 0;
+  /* margin: 0; */
+  margin-top: 80px;
 `;
 
 // export const StyledForm = styled.form`
@@ -27,15 +28,12 @@ export const FormInput = styled.input`
   border: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px;
-  /* display: flex; 
-  justify-content: center;
-  flex-wrap: wrap; */
+  padding-left: 5px;
 `;
 
 export const InputInfo = styled.p`
-  padding-left: 5px; 
+  padding-left: 20px;
   font-weight: bold;
-  /* margin-left: 0; */
 `;
 
 export const ContactKitchen = styled.textarea`
@@ -49,7 +47,7 @@ export const ContactKitchen = styled.textarea`
 
 export const TimeSection = styled.div`
   height: 240px;
-  margin: 20px; 
+  margin-bottom: 20px;
 `;
 
 export const TimeBox = styled.div`
@@ -58,7 +56,7 @@ export const TimeBox = styled.div`
   background-color: #cfcfcf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  margin: 10px;
+  margin: 15px;
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -67,12 +65,13 @@ export const TimeBox = styled.div`
 
 export const ChoseTime = styled.p`
   font-weight: bold;
+  padding-left: 20px;
 `;
 
 export const Check = styled.input`
   height: 20px;
   width: 20px;
-  /* margin-right: 20px; */
+  margin-right: 20px;
 /* If style more I have to add a library for that */
 `;
 

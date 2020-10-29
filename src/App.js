@@ -32,8 +32,14 @@ function App() {
     <Router>
       <AppWrap>
         <GlobalStyle />
-        <DeliveryInfo />
-        <Navigation />
+        <CartProvider>
+          <SoupProvider>
+            <Header />
+            {/* <SoupList /> */}
+            <DeliveryInfo />
+            <Navigation />
+          </SoupProvider>
+        </CartProvider>
       </AppWrap>
     </Router>
     // <Router>
