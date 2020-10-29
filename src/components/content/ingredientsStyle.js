@@ -124,16 +124,22 @@ export const TotalIngred = styled.p`
   margin: 10px;
 `;
 
-export const ContactKitchen = styled.div`
+export const Kitchen = styled.p`
+  margin-left: 10px;
+  font-weight: bold;
+`;
+
+export const ContactKitchen = styled.textarea`
   width: 100%;
   height: 100px;
   background-color: #fefefe;   
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
   justify-content: center;
-  padding: 10px 0;
+  padding: 10px;
   margin-top: 10px;
   border-radius: 15px;
+  font-style: italic;
 `;
 
 export const ButtonArea = styled.div`

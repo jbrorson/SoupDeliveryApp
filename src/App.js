@@ -14,7 +14,7 @@ import { CartProvider } from './pages/CartContext';
 import { SoupProvider } from './components/Soups/SoupContext';
 import SoupList from './components/Soups/SoupList';
 import Ingredients from './components/content/ingredients';
-
+import DeliveryInfo from './components/delivery/deliveryInfo';
 function App() {
   // const history = useHistory();
 
@@ -29,10 +29,13 @@ function App() {
   //   </div>);
 
   return (
-    <AppWrap>
-      <GlobalStyle />
-      <Ingredients />
-    </AppWrap>
+    <Router>
+      <AppWrap>
+        <GlobalStyle />
+        <DeliveryInfo />
+        <Navigation />
+      </AppWrap>
+    </Router>
     // <Router>
     //   <AppWrap>
     //     <GlobalStyle />

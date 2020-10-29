@@ -1,43 +1,92 @@
 import styled from 'styled-components';
 
 export const DeliveryWrap = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: #E8E6E6;
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
 `;
 
-export const StyledForm = styled.form`
-  height: 60%;
-  width: 100%;
-  margin: 0 0 30px 30px;
-  /* margin-left: 20px; */
-`;
+// export const StyledForm = styled.form`
+//   display: flex; 
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   width: 100%;
+//   border: 2px solid blue;
+// `;
 
 export const FormHeader = styled.h1`
-  width: 100%;
+  /* width: 100%; */
   font-weight: 500;
+  margin: 20px;
+  display: flex; 
+  justify-content: center;
 `
 
 export const FormInput = styled.input`
   height: 40px;
-  width: 80%;
+  width: 90%;
   border-radius: 5px;
   border: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 5px;
+  margin: 20px;
+  /* display: flex; 
+  justify-content: center;
+  flex-wrap: wrap; */
 `;
 
 export const InputInfo = styled.p`
   padding-left: 5px; 
   font-weight: bold;
+  /* margin-left: 0; */
 `;
 
 export const ContactKitchen = styled.textarea`
   height: 80px; 
-  width: 80%;
+  width: 100%;
   border-radius: 5px;
   border: none;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 10px 5px;
+`;
+
+export const TimeSection = styled.div`
+  height: 240px;
+  margin: 20px; 
+`;
+
+export const TimeBox = styled.div`
+  width: 80%;
+  height: 40px;
+  background-color: #cfcfcf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+`;
+
+export const ChoseTime = styled.p`
+  font-weight: bold;
+`;
+
+export const Check = styled.input`
+  height: 20px;
+  width: 20px;
+  /* margin-right: 20px; */
+/* If style more I have to add a library for that */
+`;
+
+export const NextBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #32936F; 
+  width: 104px;
+  height: 40px;
+  color: white;
+  border: none; 
+  border-radius: 5px;
+  margin-bottom: 80px;
+  margin-left: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;

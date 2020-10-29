@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router';
 // import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred, GoBackBtn } from './ingredientsStyle';
+import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred, GoBackBtn, Kitchen } from './ingredientsStyle';
 // import { ContentWrap } from './contentStyles';
 
 // import IngredientsIcon from '../../Icons/ingredients.svg';
@@ -39,7 +39,8 @@ const Ingredients = () => {
           </TotalIngred>
           </NutritionBox>
         </InfoCard>
-        <ContactKitchen>Kontakta köket</ContactKitchen>
+        <Kitchen>Kontakta köket</Kitchen>
+        <ContactKitchen>Enbart vid behov...</ContactKitchen>
       </IngredientsWrap>
     </>
   )

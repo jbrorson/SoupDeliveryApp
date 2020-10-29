@@ -1,28 +1,46 @@
 import React from 'react';
-import { DeliveryWrap, FormInput, StyledForm, InputInfo, ContactKitchen, FormHeader } from './deliveryInfoStyles';
+import { DeliveryWrap, FormInput, StyledForm, InputInfo, ContactKitchen, FormHeader, TimeSection, TimeBox, Check, ChoseTime, NextBtn } from './deliveryInfoStyles';
 import Navigation from '../navigation/navigation';
 import { AppWrap } from '../../appStyles';
 
 function DeliveryInfo() {
   return (
     <DeliveryWrap>
-      <StyledForm>
+      <div>
         <FormHeader>Leveransinformation</FormHeader>
-        <InputInfo>[ ] Namn *</InputInfo>
+        <InputInfo>Namn *</InputInfo>
         <FormInput type="text" placeholder="Namn" /*value={this.state.name}*/ />
-        <InputInfo>[ ] Email *</InputInfo>
+        <InputInfo>Email *</InputInfo>
         <FormInput type="text" placeholder="Email" />
-        <InputInfo>[ ] Telefon *</InputInfo>
+        <InputInfo>Telefon *</InputInfo>
         <FormInput type="text" placeholder="Telefon" />
-        <InputInfo>[ ] Adress *</InputInfo>
+        <InputInfo>Adress *</InputInfo>
         <FormInput type="text" placeholder="Adress" />
-        <InputInfo>[ ] Postnummer *</InputInfo>
+        <InputInfo>Postnummer *</InputInfo>
         <FormInput type="text" placeholder="PostNr" />
-        <InputInfo>[ ] Ort *</InputInfo>
+        <InputInfo>Ort *</InputInfo>
         <FormInput type="text" placeholder="Ort" />
-        <InputInfo>[ ] Meddela köket</InputInfo>
+        <InputInfo>Meddela köket</InputInfo>
         <ContactKitchen type="text" placeholder="Skriv här vid särskilt önskemål till köket" />
-      </StyledForm>
+      </div>
+
+      <TimeSection>
+        <InputInfo>Välj leveransdag/tid*</InputInfo>
+        <TimeBox>
+          <ChoseTime>Snarast</ChoseTime>
+          <Check type="checkbox"></Check>
+        </TimeBox>
+        <TimeBox>
+          <ChoseTime>Upphämtning</ChoseTime>
+          <Check type="checkbox"></Check>
+        </TimeBox>
+        <TimeBox>
+          <ChoseTime>Annat datum/tid</ChoseTime>
+          <Check type="checkbox"></Check>
+        </TimeBox>
+
+      </TimeSection>
+      <NextBtn type="button">Nästa</NextBtn>
     </DeliveryWrap>
   );
 }
