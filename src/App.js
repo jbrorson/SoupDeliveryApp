@@ -15,6 +15,8 @@ import { SoupProvider } from './components/Soups/SoupContext';
 import SoupList from './components/Soups/SoupList';
 import Ingredients from './components/content/ingredients';
 import DeliveryInfo from './components/delivery/deliveryInfo';
+import OrderConfirmation from './components/confirmation/orderConfirmation';
+
 function App() {
   // const history = useHistory();
 
@@ -29,6 +31,20 @@ function App() {
   //   </div>);
 
   return (
+
+
+    // <Router>
+    //   <AppWrap>
+    //     <GlobalStyle />
+    //     <CartProvider>
+    //       <SoupProvider>
+    //         <Header />
+    //         <DeliveryInfo />
+    //         <Navigation />
+    //       </SoupProvider>
+    //     </CartProvider>
+    //   </AppWrap>
+    // </Router>
     <Router>
       <AppWrap>
         <GlobalStyle />
@@ -36,30 +52,19 @@ function App() {
           <SoupProvider>
             <Header />
             {/* <SoupList /> */}
-            <DeliveryInfo />
+            <Switch>
+              <Route path="/menu" component={SoupList} />
+              <Route path="/cart" component={Cart} />
+              <Route path="/support" component={Support} />
+              <Route path="/order" component={Order} />
+            </Switch>
             <Navigation />
           </SoupProvider>
         </CartProvider>
       </AppWrap>
     </Router>
-    // <Router>
-    //   <AppWrap>
-    //     <GlobalStyle />
-    //     <CartProvider>
-    //       <SoupProvider>
-    //         <Header />
-    //         <SoupList />
-    //         <Switch>
-    //           <Route path="/menu" component={Menu} />
-    //           <Route path="/cart" component={Cart} />
-    //           <Route path="/support" component={Support} />
-    //           <Route path="/order" component={Order} />
-    //         </Switch>
-    //         <Navigation />
-    //       </SoupProvider>
-    //     </CartProvider>
-    //   </AppWrap>
-    // </Router>
+
+    // <OrderConfirmation />
   );
 }
 
