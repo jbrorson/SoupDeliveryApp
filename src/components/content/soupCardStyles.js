@@ -20,18 +20,27 @@ export const ImgHolder = styled.div`
   width: 100%; 
   display: flex; 
   justify-content: center; 
-`;
 
-export const SoupPhoto = styled.img`
-  width: 85%;
-  height: 180px;
-  margin: 20px;
-  border-radius: 7px;
+  img{
+    width: 85%;
+    height: 180px;
+    margin: 20px;
+    border-radius: 7px;
+  }
 
   ${media.desktop} {
     width: 80%;
   }
 `;
+
+
+// export const SoupPhoto = styled.image`
+//   width: 85%;
+//   height: 180px;
+//   margin: 20px;
+//   border-radius: 7px;
+
+
 
 export const Title = styled.h2`
   font-weight: bold;

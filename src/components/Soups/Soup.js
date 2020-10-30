@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { CartContext } from '../../pages/CartContext';
+import Tomatsoppa from '../../images/tomatsoppa.jpg';
+// import Potatispurjosoppa from '../../images/potatispurjosoppa.jpg';
 // import history from "../History";
 
 import {
@@ -20,7 +22,7 @@ import {
 const Soup = (props) => {
   const [cart, setCart] = useContext(CartContext);
   const addToCart = () => {
-    const soup = { name: props.name, info: props.info, time: props.time, price: props.price };
+    const soup = { name: props.name, info: props.info, time: props.time, price: props.price, image: props.image };
     setCart(curr => [...curr, soup]);
   }
 
@@ -35,7 +37,9 @@ const Soup = (props) => {
       <SoupWrap>
         <div>
           <ImgHolder>
-            <SoupPhoto src="https://imengine.public.prod.ksf.infomaker.io/imengine/image.php?uuid=5c96b398-cc73-4395-ac58-ce2b83dfa382&type=preview&source=5c96b398-cc73-4395-ac58-ce2b83dfa382&function=hardcrop&width=800&height=564&q=80"></SoupPhoto>
+            <img src={props.image} alt="" />
+            {/* <SoupPhoto src="https://imengine.public.prod.ksf.infomaker.io/imengine/image.php?uuid=5c96b398-cc73-4395-ac58-ce2b83dfa382&type=preview&source=5c96b398-cc73-4395-ac58-ce2b83dfa382&function=hardcrop&width=800&height=564&q=80"></SoupPhoto> */}
+            {/* <SoupPhoto src={props.image}></SoupPhoto> */}
           </ImgHolder>
           <InfoSection>
             <Title>{props.name}</Title>
