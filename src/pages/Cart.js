@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CartWrap, CartCard, CartItems, CartHeading, CartBtn } from '../components/shop/CartStyles';
+import { CartWrap, CartCard, CartItems, CartHeading, CartBtn, CartInfo, BtnDiv } from '../components/shop/CartStyles';
 import uuid from 'react-uuid';
 import { CartContext } from './CartContext';
 
@@ -13,7 +13,7 @@ export const Cart = () => {
       id: uuid(), name: 'Skärgårdssoppa', price: 95
     },
     {
-      id: uuid(), name: 'Potatis -och purjolökssoppa', price: 80
+      id: uuid(), name: 'Potatis/Purjolökssoppa', price: 80
     },
     {
       id: uuid(), name: 'Linssoppa', price: 80
@@ -30,17 +30,38 @@ export const Cart = () => {
     setCart(hardCopy);
   }
 
+  const style = {
+    backgroundColor: '#32936F',
+    color: '#fff',
+    borderRadius: '5px',
+    border: 0,
+    height: '25px',
+    width: '25px',
+    boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    fontSize: '20px',
+    marginLeft: '15px'
+  };
+
+  const divStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10px',
+    borderBottom: '1px solid lightgray'
+  }
+
+
   const listItems = items.map(el => (
-    <div key={el.id}>
+    <div style={divStyle} key={el.id}>
       {`${el.name}: ${el.price}kr`}
-      <input type='submit' value='+' onClick={() => addToCart(el)} />
+      <input type='submit' value='+' style={style} onClick={() => addToCart(el)} />
     </div>
   ));
 
   const cartItems = cart.map(el => (
-    <div key={el.id}>
+    <div style={divStyle} key={el.id}>
       {`${el.name}: ${el.price}kr`}
-      <input type='submit' value='-' onClick={() => removeFromCart(el)} />
+      <input type='submit' value='-' style={style} onClick={() => removeFromCart(el)} />
     </div>
   ));
 
@@ -49,10 +70,12 @@ export const Cart = () => {
       <CartCard>
         <CartHeading>Din kundvagn</CartHeading>
         <CartItems>{listItems}</CartItems>
-        <p>Din kundvagn innehåller: ({cart.length})st soppor</p>
+        <CartInfo>Din kundvagn innehåller: ({cart.length})st soppor</CartInfo>
         <CartItems>{cartItems}</CartItems>
-        <CartBtn>Till kassa</CartBtn>
-        <CartBtn>Tillbaka till meny</CartBtn>
+        <BtnDiv>
+          <CartBtn>Till kassa</CartBtn>
+          <CartBtn>Till meny</CartBtn>
+        </BtnDiv>
       </CartCard>
     </CartWrap>
   )

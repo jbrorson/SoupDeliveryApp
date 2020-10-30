@@ -31,20 +31,6 @@ function App() {
   //   </div>);
 
   return (
-
-
-    // <Router>
-    //   <AppWrap>
-    //     <GlobalStyle />
-    //     <CartProvider>
-    //       <SoupProvider>
-    //         <Header />
-    //         <DeliveryInfo />
-    //         <Navigation />
-    //       </SoupProvider>
-    //     </CartProvider>
-    //   </AppWrap>
-    // </Router>
     <Router>
       <AppWrap>
         <GlobalStyle />

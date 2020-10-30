@@ -22,15 +22,15 @@ export const ImgHolder = styled.div`
   justify-content: center; 
 
   img{
-    width: 85%;
-    height: 180px;
-    margin: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
     border-radius: 7px;
   }
 
-  ${media.desktop} {
+  /* ${media.desktop} {
     width: 80%;
-  }
+  } */
 `;
 
 

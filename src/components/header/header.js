@@ -11,6 +11,12 @@ const Header = () => {
   const totalPrice = cart.reduce(
     (prevValue, currentValue) => prevValue + currentValue.price, 0);
 
+  // const showCart = () => {
+  //   const [cart, setCart] = useContext(CartContext);
+  //   const openCart = cart.reduce(
+  //     (pre, curr) => pre + curr.name, null)
+  // };
+
   return (
     <HeaderWrap>
       <HeaderCart>

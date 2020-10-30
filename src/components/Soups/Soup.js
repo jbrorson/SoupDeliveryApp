@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { CartContext } from '../../pages/CartContext';
-import Tomatsoppa from '../../images/tomatsoppa.jpg';
-// import Potatispurjosoppa from '../../images/potatispurjosoppa.jpg';
-// import history from "../History";
 
 import {
   SoupWrap,

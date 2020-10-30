@@ -54,17 +54,4 @@ const SoupList = () => {
   )
 }
 
-// const SoupList = () => {
-//   const value = useContext(SoupContext);
-//   return (
-//     <div>
-//       <Soup />
-//       <h1>{value}</h1>
-//       {soups.map(soup => (
-//         <Soup name={soup.name} price={soup.price} key={soup.id} />
-//       ))}
-//     </div>
-//   );
-// }
-
 export default SoupList;
