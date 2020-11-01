@@ -10,8 +10,8 @@ const Header = () => {
   const [cart, setCart] = useContext(CartContext);
   const totalPrice = cart.reduce(
     (prevValue, currentValue) => prevValue + currentValue.price, 0);
-  const [showPopup, setShowPopup] = useState(false);
 
+  const [showPopup, setShowPopup] = useState(false);
   const openPopup = () => {
     setShowPopup(prev => !prev);
     console.log('clicked');

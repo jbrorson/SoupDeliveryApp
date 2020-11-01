@@ -15,7 +15,8 @@ import { SoupProvider } from './components/Soups/SoupContext';
 import SoupList from './components/Soups/SoupList';
 import Ingredients from './components/content/ingredients';
 import DeliveryInfo from './components/delivery/deliveryInfo';
-// import OrderConfirmation from './components/confirmation/orderConfirmation';
+import OrderConfirmation from './components/confirmation/orderConfirmation';
+import SoupCard from './components/content/soupCard';
 // import Popup from './components/Popup';
 // import styled from 'styled-components';
 
@@ -73,14 +74,14 @@ function App() {
               <Route path="/order" component={Order} />
               <Route path="/deliveryInfo" component={DeliveryInfo} />
               <Route path="/ingredients" component={Ingredients} />
+              <Route path="/orderConfirmation" component={OrderConfirmation} />
+              {/* <Route path="/soupCard" component={SoupCard} /> */}
             </Switch>
             <Navigation />
           </SoupProvider>
         </CartProvider>
       </AppWrap>
     </Router>
-
-    // <OrderConfirmation />
   );
 }
 

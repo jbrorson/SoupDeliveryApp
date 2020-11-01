@@ -1,13 +1,15 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import { DeliveryWrap, FormInput, StyledForm, InputInfo, ContactKitchen, FormHeader, TimeSection, TimeBox, Check, ChoseTime, NextBtn } from './deliveryInfoStyles';
-import Navigation from '../navigation/navigation';
-import { AppWrap } from '../../appStyles';
+// import Navigation from '../navigation/navigation';
+// import { AppWrap } from '../../appStyles';
 
 function DeliveryInfo() {
   const location = useLocation();
   useEffect(() => {
   }, [location]);
+
+  const history = useHistory();
 
   return (
     <DeliveryWrap>
@@ -30,7 +32,7 @@ function DeliveryInfo() {
       </div>
 
       <TimeSection>
-        <h4>Välj leveransdag/tid*</h4>
+        <h4>Välj leveransdag/tid *</h4>
         <TimeBox>
           <ChoseTime>Snarast</ChoseTime>
           <Check type="checkbox"></Check>
@@ -45,7 +47,7 @@ function DeliveryInfo() {
         </TimeBox>
 
       </TimeSection>
-      <NextBtn type="button">Nästa</NextBtn>
+      <NextBtn type="button" onClick={() => history.push('/orderConfirmation')}>Nästa</NextBtn>
     </DeliveryWrap>
   );
 }

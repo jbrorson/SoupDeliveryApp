@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, useHistory } from 'react-router-dom';
 import { CartContext } from '../../pages/CartContext';
-
 import {
   SoupWrap,
   SoupPhoto,
@@ -22,7 +21,7 @@ const Soup = (props) => {
     const soup = { name: props.name, info: props.info, time: props.time, price: props.price, image: props.image };
     setCart(curr => [...curr, soup]);
   }
-
+  const history = useHistory();
 
   // const ShowIngredients = () => {
   //   history.push("/ingredients");
@@ -40,7 +39,7 @@ const Soup = (props) => {
           </ImgHolder>
           <InfoSection>
             <Title>{props.name}</Title>
-            <InfoButton type="button">i</InfoButton>
+            <InfoButton type="button" onClick={() => history.push('/ingredients')}>i</InfoButton>
           </InfoSection>
           <InfoSection>
             <Info>{props.info}</Info>

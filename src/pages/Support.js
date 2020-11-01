@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Container, Content, PageHeading, Paragraph, Faq, ContactSection, VisitUs, MailUs, CallUs } from './SupportStyles';
 
 const Support = () => {
+  const location = useLocation();
+
   return (
     <Container>
       <Content>

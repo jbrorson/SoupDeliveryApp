@@ -10,20 +10,9 @@ import Linser from '../../images/linssoppa.jpg';
 const SoupList = () => {
   const location = useLocation();
   useEffect(() => {
-    // const currentPath = location.name;
-    // const searchParams = new URLSearchParams(location.search);
   }, [location]);
-  // const history = useHistory();
-  // const goSoupList = () => {
-  //   props.history.push
-
-
-
-
-
 
   const database = [
-
     {
       name: "Tomatsoppa",
       price: 80,
@@ -65,6 +54,7 @@ const SoupList = () => {
         ))
       }
     </div>
+
   )
 }
 
