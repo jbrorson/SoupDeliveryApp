@@ -4,47 +4,36 @@ const media = {
   desktop: '@media(min-width: 900px)'
 }
 
-export const TotalWrap = styled.section`
-  margin-top: 50px;
-  background-color: #E8E6E6;
-  width: 100%; 
+export const Container = styled.section`
+  margin-top: 100px;
 `;
 
-export const OrderHeader = styled.h1`
+export const Heading = styled.h1`
   height: 40px;
   display: flex; 
   justify-content: center; 
 `;
 
-export const OrderWrap = styled.div`
+export const Order = styled.div`
   width: 320px;
-  height: 300px;
   margin: 20px;
+  padding: 20px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 `;
 
-export const TextWrap = styled.section`
-  height: 280px;
+export const OrderContent = styled.section`
   margin: 30px 20px;
 `;
 
-export const RowWrap = styled.div`
-  height: 40px; 
+export const Content = styled.div`
   display: flex; 
   justify-content: space-between;
-  padding: 0 10px;
-  border-bottom: 1px solid gray;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
   margin: 10px;
-`;
-
-export const EditBtn = styled.button`
-  height: 30px; 
-  width: 30px; 
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 export const SumWrap = styled.h4`
@@ -52,63 +41,83 @@ export const SumWrap = styled.h4`
   justify-content: center;
 `;
 
-export const OrderTo = styled.div`
+export const DeliveryInfo = styled.div`
   width: 320px;
-  height: 500px;
   margin: 20px;
+  padding: 20px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 `;
 
-export const DeliverToPerson = styled.section`
-  height: 400px;
-  margin: 30px 20px;
+export const EditBtn = styled.button`
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-export const LevInfo = styled.div`
-  height: 50px;
-  display: flex; 
-  justify-content: space-between;
+export const DeliverTo = styled.section`
+  margin: 30px 20px;
 `;
 
 export const YourInfo = styled.div`
   height: 30px; 
   display: flex; 
   justify-content: space-between;
-  padding: 10px;
+  align-items: center; 
+  margin-bottom: 20px; 
+
+  button{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 `;
 
-export const LevPreOver = styled.h1`
-  padding-bottom: 10px; 
+// export const LevPreOver = styled.h2`
+//   margin-bottom: 10px; 
+// `;
+
+export const LevInfo = styled.div`
+  display: flex; 
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  
+  p{
+    padding: 10px; 
+  }
 `;
 
-export const Greeting = styled.input`
+export const Greeting = styled.div`
   width: 100%; 
-  height: 60px; 
   border-radius: 5px;
-  font-style: italic;
-  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border: none;
-  background-color: #e8e8e8; 
-  padding-left: 5px;
-`;
+  background-color: #f2f2f2;
+  margin-top: 10px;
+  
+  h3{
+    padding: 10px;
+  }
 
-export const Final = styled.div`
-  padding: 10px;
+  p{
+    padding: 10px;
+    font-style: italic;
+  }
 `;
 
 export const Payment = styled.div`
   width: 320px;
-  height: 200px;
   margin: 20px;
+  margin-bottom: 140px;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 `;
 
 export const ChoosePayment = styled.h2`
-  height: 30px;
   display: flex; 
   justify-content: center; 
   padding-top: 20px;
@@ -132,5 +141,7 @@ export const PayPicker = styled.button`
 export const ButtonArea = styled.div`
   display: flex; 
   justify-content: center;
+  align-items: center;
   flex-flow: wrap;
+  padding-bottom: 20px;
 `;

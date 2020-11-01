@@ -1,37 +1,33 @@
 import React from 'react';
-import { OrderWrap, TotalWrap, OrderHeader, TextWrap, RowWrap, SumWrap, EditBtn, YourInfo, LevInfo, LevPreOver, Greeting, OrderTo, DeliverToPerson, Final, Payment, ChoosePayment, PayPicker, ButtonArea } from './orderCofirmationStyles';
+import { Container, Order, Heading, OrderContent, Content, SumWrap, DeliveryInfo, EditBtn, YourInfo, LevInfo, LevPreOver, Greeting, DeliverTo, Payment, ChoosePayment, PayPicker, ButtonArea } from './orderCofirmationStyles';
 
 const OrderConfirmation = () => {
   return (
-    <TotalWrap>
-      <OrderHeader>Orderöversikt</OrderHeader>
-      <OrderWrap>
-        <TextWrap>
-          <RowWrap>
+    <Container>
+      <Heading>Orderöversikt</Heading>
+      <Order>
+        <OrderContent>
+          <Content>
             <h4>Soppa</h4><h4>Antal</h4><h4>Ändra</h4>
-          </RowWrap>
-          <RowWrap>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">(|)</EditBtn>
-          </RowWrap>
-          <RowWrap>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">(|)</EditBtn>
-          </RowWrap>
-          <RowWrap>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">(|)</EditBtn>
-          </RowWrap>
-
+          </Content>
+          <Content>
+            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+          </Content>
+          <Content>
+            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+          </Content>
+          <Content>
+            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+          </Content>
           <SumWrap>Summa att betala 240kr</SumWrap>
-
-        </TextWrap>
-      </OrderWrap>
-
-      <OrderTo>
-        <DeliverToPerson>
+        </OrderContent>
+      </Order>
+      <DeliveryInfo>
+        <DeliverTo>
           <YourInfo>
-            <LevPreOver>Leveransöversikt</LevPreOver>
-            <EditBtn type="button">edit</EditBtn>
+            <h2>Leveransöversikt</h2>
+            <button type="button">Ändra</button>
           </YourInfo>
-          <hr />
           <LevInfo>
             <p>Namn</p><p>Namn</p>
           </LevInfo>
@@ -47,14 +43,12 @@ const OrderConfirmation = () => {
           <LevInfo>
             <p>Telefon</p><p>Telefon</p>
           </LevInfo>
-          <hr />
-          <Final>
-            <h3>Skicka en hälsning: </h3>
-            <Greeting type="textarea" placeholder="Säg något fint!?.."></Greeting>
-          </Final>
-        </DeliverToPerson>
-      </OrderTo>
-
+          <Greeting>
+            <h3>Hälsning</h3>
+            <p>Här kommer lite uppiggande soppa som du kan värma dig med!</p>
+          </Greeting>
+        </DeliverTo>
+      </DeliveryInfo>
       <Payment>
         <ChoosePayment>Välj betalningsmetod</ChoosePayment>
         <ButtonArea>
@@ -62,8 +56,7 @@ const OrderConfirmation = () => {
           <PayPicker type="button">Betalkort</PayPicker>
         </ButtonArea>
       </Payment>
-      <br />
-    </TotalWrap>
+    </Container>
   );
 }
 
