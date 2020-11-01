@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { CartWrap, CartCard, CartItems, CartHeading, CartBtn, CartInfo, BtnDiv } from '../components/shop/CartStyles';
 import uuid from 'react-uuid';
 import { CartContext } from './CartContext';
 
 export const Cart = () => {
   const [cart, setCart] = useState([]);
+  const history = useHistory();
+  console.log(history);
+
+
   const items = [
     {
       id: uuid(), name: 'Tomatsoppa', price: 90
@@ -73,11 +78,11 @@ export const Cart = () => {
         <CartInfo>Din kundvagn innehåller: ({cart.length})st soppor</CartInfo>
         <CartItems>{cartItems}</CartItems>
         <BtnDiv>
-          <CartBtn>Till kassa</CartBtn>
-          <CartBtn>Till meny</CartBtn>
+          <CartBtn onClick={() => history.push('/menu')}>Till meny</CartBtn>
+          <CartBtn onClick={() => history.push('/deliveryInfo')}>Till kassa</CartBtn>
         </BtnDiv>
       </CartCard>
-    </CartWrap>
+    </CartWrap >
   )
 };
 

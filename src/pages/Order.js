@@ -1,15 +1,15 @@
 import React from 'react';
-import { PageWrap, PageCard, PageHeading } from './PageStyles';
+import { Container, FollowOrder, Heading } from './OrderStyles';
 
 const Order = () => {
   return (
 
-    <PageWrap>
-      <PageCard>
-        <PageHeading>Följ Order</PageHeading>
+    <Container>
+      <FollowOrder>
+        <Heading>Följ Order</Heading>
         <p>Lägg till karta</p>
-      </PageCard>
-    </PageWrap>
+      </FollowOrder>
+    </Container>
 
   )
 };

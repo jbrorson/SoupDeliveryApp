@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { DeliveryWrap, FormInput, StyledForm, InputInfo, ContactKitchen, FormHeader, TimeSection, TimeBox, Check, ChoseTime, NextBtn } from './deliveryInfoStyles';
 import Navigation from '../navigation/navigation';
 import { AppWrap } from '../../appStyles';
 
 function DeliveryInfo() {
+  const location = useLocation();
+  useEffect(() => {
+  }, [location]);
+
   return (
     <DeliveryWrap>
       <div>

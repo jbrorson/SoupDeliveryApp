@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Soup from './Soup';
 import uuid from 'react-uuid';
 import Tomat from '../../images/tomatsoppa.jpg';
@@ -7,6 +8,19 @@ import Purjo from '../../images/potatispurjosoppa.jpg';
 import Linser from '../../images/linssoppa.jpg';
 
 const SoupList = () => {
+  const location = useLocation();
+  useEffect(() => {
+    // const currentPath = location.name;
+    // const searchParams = new URLSearchParams(location.search);
+  }, [location]);
+  // const history = useHistory();
+  // const goSoupList = () => {
+  //   props.history.push
+
+
+
+
+
 
   const database = [
 

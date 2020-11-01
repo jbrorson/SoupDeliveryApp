@@ -5,10 +5,12 @@ const media = {
 }
 
 export const IngredientsWrap = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background: #E8E6E6;
   margin: 20px;
+  margin-top: 120px; 
+  margin-bottom: 100px;
 
   ${media.desktop} {
     width: 50%;    
