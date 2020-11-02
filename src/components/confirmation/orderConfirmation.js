@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
-import { Container, Order, Heading, OrderContent, Content, SumWrap, DeliveryInfo, EditBtn, YourInfo, LevInfo, LevPreOver, Greeting, DeliverTo, Payment, ChoosePayment, PayPicker, ButtonArea } from './orderCofirmationStyles';
+import { Container, Order, Heading, OrderContent, Content, SumWrap, DeliveryInfo, EditBtn, YourInfo, LevInfo, LevPreOver, Greeting, DeliverTo, Payment, ChoosePayment, PayPicker, ButtonArea, Message, CreditCard } from './orderCofirmationStyles';
 import { useHistory, useLocation } from 'react-router-dom';
-
+import SwishIcon from '../../images/swish.png';
+import MastercardIcon from '../../Icons/mastercard.svg';
+import Creditcard from '../../Icons/creditcard.svg';
+import Edit from '../../Icons/editbutton.svg';
 
 const OrderConfirmation = () => {
   const history = useHistory();
@@ -19,13 +22,16 @@ const OrderConfirmation = () => {
             <h4>Soppa</h4><h4>Antal</h4><h4>Ändra</h4>
           </Content>
           <Content>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+            <p>Lissoppa</p><p>1</p>
+            <img src={Edit} alt="" style={{ height: '25px', width: '25px' }} />
           </Content>
           <Content>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+            <p>Lissoppa</p><p>1</p>
+            <img src={Edit} alt="" style={{ height: '25px', width: '25px' }} />
           </Content>
           <Content>
-            <p>Lissoppa</p><p>1</p><EditBtn type="button">Ändra</EditBtn>
+            <p>Lissoppa</p><p>1</p>
+            <img src={Edit} alt="" style={{ height: '25px', width: '25px' }} />
           </Content>
           <SumWrap>Summa att betala 240kr</SumWrap>
         </OrderContent>
@@ -34,7 +40,7 @@ const OrderConfirmation = () => {
         <DeliverTo>
           <YourInfo>
             <h2>Leveransöversikt</h2>
-            <button type="button">Ändra</button>
+            <img src={Edit} alt="" style={{ height: '25px', width: '25px' }} />
           </YourInfo>
           <LevInfo>
             <p>Namn</p><p>Namn</p>
@@ -52,16 +58,19 @@ const OrderConfirmation = () => {
             <p>Telefon</p><p>Telefon</p>
           </LevInfo>
           <Greeting>
-            <h3>Hälsning</h3>
-            <p>Här kommer lite uppiggande soppa som du kan värma dig med!</p>
+            <h3>Meddelande till bud</h3>
+            <Message>Portkod 12213, 2 trappor upp, hiss finns</Message>
           </Greeting>
         </DeliverTo>
       </DeliveryInfo>
       <Payment>
+        <CreditCard>
+          <img src={Creditcard} alt="" />
+        </CreditCard>
         <ChoosePayment>Välj betalningsmetod</ChoosePayment>
         <ButtonArea>
-          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}>Swish</PayPicker>
-          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}>Betalkort</PayPicker>
+          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}><img src={SwishIcon} style={{ height: '30px', width: '30px' }} />Swish</PayPicker>
+          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}><img src={MastercardIcon} style={{ height: '30px', width: '30px' }} />Betalkort</PayPicker>
         </ButtonArea>
       </Payment>
     </Container>

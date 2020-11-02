@@ -39,6 +39,7 @@ export const Content = styled.div`
 export const SumWrap = styled.h4`
   display: flex; 
   justify-content: center;
+  padding-top: 20px;
 `;
 
 export const DeliveryInfo = styled.div`
@@ -90,18 +91,17 @@ export const Greeting = styled.div`
   width: 100%; 
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-  background-color: #f2f2f2;
   margin-top: 10px;
   
   h3{
-    padding: 10px;
+    padding: 10px 0 0 20px;
   }
+`;
 
-  p{
-    padding: 10px;
-    font-style: italic;
-  }
+export const Message = styled.div`
+  font-style: italic;
+  padding: 20px;
+  color: gray;
 `;
 
 export const Payment = styled.div`
@@ -113,23 +113,25 @@ export const Payment = styled.div`
   border-radius: 10px;
 `;
 
-export const ChoosePayment = styled.h2`
+export const ChoosePayment = styled.h3`
   display: flex; 
   justify-content: center; 
-  padding-top: 20px;
+  padding: 20px 0;
+  border-bottom: 2px solid lightgray;
 `;
 
 export const PayPicker = styled.button`
   display: flex; 
   flex-flow: wrap;
   margin: 10px; 
-  padding: 10px; 
+  padding: 0 20px; 
   width: 155px;
   height: 41px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   border-radius: 5px;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   border: none;
   font-weight: bold;
 `;
@@ -140,4 +142,10 @@ export const ButtonArea = styled.div`
   align-items: center;
   flex-flow: wrap;
   padding-bottom: 20px;
+`;
+
+export const CreditCard = styled.div`
+  display: flex; 
+  justify-content: center; 
+  padding-top: 20px; 
 `;

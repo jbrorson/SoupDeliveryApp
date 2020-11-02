@@ -74,29 +74,51 @@ export const GiveFeedback = styled.div`
 `;
 
 export const Good = styled.button`
-  height: 80px;
-  width: 80px;
-  background-color: #D2FFE4; 
+   width: 109px;
+  background-color: #D2FFE4;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
   justify-content: center;
+  align-items: center;
   padding: 20px;
   border-radius: 15px;
   font-size: 15px;
   border: none;
+  flex-flow: column;
+
+  :hover{
+    background-color: #abffcd;
+    cursor: pointer;
+  }
+
+  p{
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
 `;
 
 export const Bad = styled.button`
-  height: 80px;
-  width: 80px;
+  width: 109px;
   background-color: #FFF0F0; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
   justify-content: center;
+  align-items: center;
   padding: 20px;
   border-radius: 15px;
   font-size: 15px;
   border: none;
+  flex-flow: column;
+
+  p{
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  :hover{
+    background-color: #ffd1d1;
+    cursor: pointer;
+  }
 `;
 
 export const Background = styled.div`
@@ -108,9 +130,31 @@ export const Background = styled.div`
   margin-top: 20px;
 `;
 
+export const BtnArea = styled.div`
+  display: flex; 
+  justify-content: center; 
+  margin-top: 10px;
+
+  button{
+    background-color: #32936F;
+    color: #fff;
+    border-radius: 5px; 
+    border: none; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    width: 70px;
+  }  
+`;
+
 export const LeaveFeedback = styled.input`
-  height: 100px;
+  height: 50px;
   width: 100%;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid lightgray;
+  border-radius: 5px;
+`;
+
+export const Icon = styled.div`
+  display: flex; 
+  justify-content: center;
 `;
