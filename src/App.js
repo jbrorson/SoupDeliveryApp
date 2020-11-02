@@ -18,6 +18,7 @@ import DeliveryInfo from './components/delivery/deliveryInfo';
 import OrderConfirmation from './components/confirmation/orderConfirmation';
 import Receipt from './components/confirmation/receipt';
 import Thankyou from './components/confirmation/thankyou';
+import Landing from './components/content/landing.js';
 
 function App() {
   // const [showPopup, setShowPopup] = useState(false);
@@ -45,6 +46,7 @@ function App() {
               <Route path="/orderConfirmation" component={OrderConfirmation} />
               <Route path="/receipt" component={Receipt} />
               <Route path="/thankyou" component={Thankyou} />
+              <Route path="/landing" component={Landing} />
             </Switch>
             <Navigation />
           </SoupProvider>

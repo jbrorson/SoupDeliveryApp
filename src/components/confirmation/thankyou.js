@@ -12,7 +12,7 @@ const Thankyou = () => {
   return (
     <Container>
       <Heading>Tack så mycket!</Heading>
-      <BackToStart type="button" alt="" onClick={() => history.push('/menu')}>Till meny</BackToStart>
+      <BackToStart type="button" alt="" onClick={() => history.push('/landing')}>Till meny</BackToStart>
     </Container>
   )
 };

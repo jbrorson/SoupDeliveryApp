@@ -66,7 +66,7 @@ const Receipt = () => {
       </ReceiptWrap>
       <Feedback>
         <Heading>Feedback
-          <img src={CommentIcon} alt="" style={{ height: '30px' }} />
+          <img src={CommentIcon} alt="" style={{ height: '30px', paddingLeft: '10px' }} />
         </Heading>
         <Heading2>Berätta gärna om din upplevelse för oss</Heading2>
         <GiveFeedback>
