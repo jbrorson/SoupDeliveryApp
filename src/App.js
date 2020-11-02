@@ -16,48 +16,16 @@ import SoupList from './components/Soups/SoupList';
 import Ingredients from './components/content/ingredients';
 import DeliveryInfo from './components/delivery/deliveryInfo';
 import OrderConfirmation from './components/confirmation/orderConfirmation';
-import SoupCard from './components/content/soupCard';
-// import Popup from './components/Popup';
-// import styled from 'styled-components';
-
-
-
-// const Container = styled.div`
-//   display: flex; 
-//   justify-content: center; 
-//   align-items: center; 
-//   height: 100vh; 
-// `
-
-// const Button = styled.button`
-//     min-width: 100px; 
-//     padding: 16px 32px; 
-//     border-radius: 4px; 
-//     border: none; 
-//     background: black; 
-//     color: #fff; 
-//     font-size: 24px; 
-//     cursor: pointer; 
-//   `;
+import Receipt from './components/confirmation/receipt';
+import Thankyou from './components/confirmation/thankyou';
 
 function App() {
-
   // const [showPopup, setShowPopup] = useState(false);
 
   // const openPopup = () => {
   //   setShowPopup(prev => !prev);
   // };
   // const history = useHistory();
-
-  // const handleClick = name => {
-  //   history.push(`"/ingredients"`);
-  // };
-  // return (
-  //   <div>
-  //     <h1>hello</h1>
-  //     <h2>denna skiten suger så jävla hårt</h2>
-  //     <button onClick={() => handleClick("Denna component bör flyttas")}>To about</button>
-  //   </div>);
 
   return (
     <Router>
@@ -75,7 +43,8 @@ function App() {
               <Route path="/deliveryInfo" component={DeliveryInfo} />
               <Route path="/ingredients" component={Ingredients} />
               <Route path="/orderConfirmation" component={OrderConfirmation} />
-              {/* <Route path="/soupCard" component={SoupCard} /> */}
+              <Route path="/receipt" component={Receipt} />
+              <Route path="/thankyou" component={Thankyou} />
             </Switch>
             <Navigation />
           </SoupProvider>

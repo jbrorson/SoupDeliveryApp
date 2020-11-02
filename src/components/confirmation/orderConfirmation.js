@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Order, Heading, OrderContent, Content, SumWrap, DeliveryInfo, EditBtn, YourInfo, LevInfo, LevPreOver, Greeting, DeliverTo, Payment, ChoosePayment, PayPicker, ButtonArea } from './orderCofirmationStyles';
+import { useHistory, useLocation } from 'react-router-dom';
+
 
 const OrderConfirmation = () => {
+  const history = useHistory();
+
+  const location = useLocation();
+  useEffect(() => {
+  }, [location]);
+
   return (
     <Container>
       <Heading>Orderöversikt</Heading>
@@ -52,8 +60,8 @@ const OrderConfirmation = () => {
       <Payment>
         <ChoosePayment>Välj betalningsmetod</ChoosePayment>
         <ButtonArea>
-          <PayPicker type="button">Swish</PayPicker>
-          <PayPicker type="button">Betalkort</PayPicker>
+          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}>Swish</PayPicker>
+          <PayPicker type="button" alt="" onClick={() => history.push('/receipt')}>Betalkort</PayPicker>
         </ButtonArea>
       </Payment>
     </Container>

@@ -76,10 +76,6 @@ export const YourInfo = styled.div`
   }
 `;
 
-// export const LevPreOver = styled.h2`
-//   margin-bottom: 10px; 
-// `;
-
 export const LevInfo = styled.div`
   display: flex; 
   justify-content: space-between;
