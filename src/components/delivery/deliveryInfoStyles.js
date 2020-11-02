@@ -1,20 +1,10 @@
 import styled from 'styled-components';
 
 export const DeliveryWrap = styled.div`
-  /* margin: 0; */
   margin-top: 80px;
 `;
 
-// export const StyledForm = styled.form`
-//   display: flex; 
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   width: 100%;
-//   border: 2px solid blue;
-// `;
-
 export const FormHeader = styled.h1`
-  /* width: 100%; */
   font-weight: 500;
   margin: 20px;
   display: flex; 
@@ -36,30 +26,40 @@ export const InputInfo = styled.p`
   font-weight: bold;
 `;
 
-export const ContactKitchen = styled.textarea`
+export const Background = styled.div`
+  height: 180px; 
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+
+  h4{
+    padding-bottom: 10px; 
+  }
+`;
+
+export const ContactKitchen = styled.input`
   height: 80px; 
   width: 100%;
   border-radius: 5px;
   border: none;
+  padding-left: 5px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px 5px;
 `;
 
 export const TimeSection = styled.div`
-  height: 240px;
-  margin-bottom: 20px;
+  padding: 20px;
 `;
 
 export const TimeBox = styled.div`
-  width: 80%;
   height: 40px;
   background-color: #cfcfcf;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   margin: 15px;
-  padding: 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 `;
 
@@ -75,17 +75,22 @@ export const Check = styled.input`
 /* If style more I have to add a library for that */
 `;
 
-export const NextBtn = styled.button`
+export const Next = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center; 
-  background-color: #32936F; 
+  justify-content: center;
+`;
+
+export const Button = styled.button`
+  display: flex;
   width: 104px;
-  height: 40px;
+  height: 40px; 
+  justify-content: center; 
+  align-items: center;
+  background-color: #32936F; 
   color: white;
   border: none; 
   border-radius: 5px;
+  padding: 20px;
   margin-bottom: 80px;
-  margin-left: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
