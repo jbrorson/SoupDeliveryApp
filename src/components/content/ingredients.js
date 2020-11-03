@@ -1,12 +1,27 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import IngredIcon from '../../Icons/ingredients.svg';
+import HeartIcon from '../../Icons/nutritional.svg';
 import { CartContext } from '../../pages/CartContext';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import { IngredientsWrap, SoupImg, SoupInfo, Dish, DishIncludes, DishPrice, IngredientBox, NutritionBox, InfoCard, ContactKitchen, ButtonArea, ButtonAdd, ButtonDelete, TotalIngred, GoBackBtn, Kitchen } from './ingredientsStyle';
-// import { ContentWrap } from './contentStyles';
-
-// import IngredientsIcon from '../../Icons/ingredients.svg';
+import {
+  IngredientsWrap,
+  SoupImg,
+  SoupInfo,
+  Dish,
+  DishIncludes,
+  DishPrice,
+  IngredientBox,
+  NutritionBox,
+  InfoCard,
+  ContactKitchen,
+  ButtonArea,
+  ButtonAdd,
+  ButtonDelete,
+  GoBackBtn,
+  Kitchen,
+  Background,
+  Button
+} from './ingredientsStyle';
 
 const Ingredients = () => {
 
@@ -27,11 +42,10 @@ const Ingredients = () => {
 
   return (
     <IngredientsWrap>
+      {/* <GoBackBtn type="button">X</GoBackBtn> */}
       <SoupImg src="https://imengine.public.prod.ksf.infomaker.io/imengine/image.php?uuid=5c96b398-cc73-4395-ac58-ce2b83dfa382&type=preview&source=5c96b398-cc73-4395-ac58-ce2b83dfa382&function=hardcrop&width=800&height=564&q=80"></SoupImg>
       <SoupInfo>
-        <Dish>Tomatsoppa
-          <GoBackBtn type="button">X</GoBackBtn>
-        </Dish>
+        <Dish>Tomatsoppa</Dish>
         <DishIncludes>Hög proteinhalt</DishIncludes>
         <DishPrice>Pris: 80 kr</DishPrice>
       </SoupInfo>
@@ -41,21 +55,31 @@ const Ingredients = () => {
       </ButtonArea>
       <InfoCard>
         <IngredientBox>
-          {/* <svg src="http://www.w3.org/2000/svg" width="40px" height="40px" color="green" /> */}
-          <TotalIngred>Ingredientser<br /><br />Spenat, Tomat, Korriander, Tomat, Linser, osv</TotalIngred>
+          <img src={IngredIcon} />
+          <h5>Ingredientser</h5>
+          <p>
+            Spenat, Tomat,<br />
+            Korriander, Tomat,<br />
+            Linser, osv
+          </p>
         </IngredientBox>
         <NutritionBox>
-          <TotalIngred>Näringsinnehåll<br /><br />
-          Kalorier:
-          Protein: 37g/100g
-          Fett:
-          Socker:
-          </TotalIngred>
+          <img src={HeartIcon} alt="" />
+          <h5>Näringsinnehåll</h5>
+          <p>
+            Kalorier:
+            Protein: 37g/100g
+            Fett:
+            Socker:
+          </p>
         </NutritionBox>
       </InfoCard>
-      <Kitchen>Kontakta köket</Kitchen>
-      <ContactKitchen type="text" placeholder="Endast vid behov..."></ContactKitchen>
-    </IngredientsWrap>
+      <Background>
+        <Kitchen>Kontakta köket</Kitchen>
+        <ContactKitchen type="text" placeholder="Endast vid behov..."></ContactKitchen>
+        <Button>OK</Button>
+      </Background>
+    </IngredientsWrap >
   )
 };
 

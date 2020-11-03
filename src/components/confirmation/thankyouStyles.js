@@ -12,9 +12,20 @@ export const Container = styled.section`
   flex-direction: column;
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   display: flex; 
   justify-content: center; 
+  padding: 20px;
+  font-family: 'Yesteryear', cursive;
+  font-size: 40px;
+  color: #32936F;
+`;
+
+export const Heading2 = styled.h3`
+  display: flex; 
+  justify-content: center; 
+  font-weight: 300;
+  padding: 20px;
 `;
 
 export const BackToStart = styled.button`

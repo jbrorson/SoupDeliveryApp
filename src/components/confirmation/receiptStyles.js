@@ -146,12 +146,13 @@ export const BtnArea = styled.div`
   }  
 `;
 
-export const LeaveFeedback = styled.input`
+export const LeaveFeedback = styled.textarea`
   height: 50px;
   width: 100%;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
   border: 1px solid lightgray;
   border-radius: 5px;
+  padding: 10px;
 `;
 
 export const Icon = styled.div`

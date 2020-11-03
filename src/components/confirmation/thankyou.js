@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { Container, Heading, BackToStart } from './thankyouStyles';
+import { Container, Heading, BackToStart, Heading2 } from './thankyouStyles';
 
 const Thankyou = () => {
   const location = useLocation();
@@ -11,8 +11,10 @@ const Thankyou = () => {
 
   return (
     <Container>
-      <Heading>Tack så mycket!</Heading>
-      <BackToStart type="button" alt="" onClick={() => history.push('/landing')}>Till meny</BackToStart>
+      <Heading>Souper Healthy</Heading>
+      <Heading2>Tack för din feedback</Heading2>
+      <p>Vi ses snart igen</p>
+      <BackToStart type="button" alt="" onClick={() => history.push('/landing')}>Tillbaka till meny</BackToStart>
     </Container>
   )
 };

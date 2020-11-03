@@ -1,0 +1,11 @@
+export const MENU = '/menu';
+export const SUPPORT = '/support';
+export const CART = '/cart';
+export const ORDER = '/order';
+export const SOUPLIST = '/soupList';
+export const INGREDIENTS = '/ingredients';
+export const DELIVERYINFO = '/deliveryInfo';
+export const ORDERCONFIRMATION = '/orderConfirmation';
+export const RECEIPT = '/receipt';
+export const THANKYOU = '/thankyou';
+// export const LANDING = '/landing';

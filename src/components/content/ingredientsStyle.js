@@ -5,8 +5,6 @@ const media = {
 }
 
 export const IngredientsWrap = styled.div`
-  height: 100vh;
-  width: 100%;
   background: #E8E6E6;
   margin: 20px;
   margin-top: 120px; 
@@ -16,8 +14,6 @@ export const IngredientsWrap = styled.div`
     width: 50%;    
   }
 `;
-
-// img tar upp 100% av width och kan därför inte få till ordentligt 
 export const SoupImg = styled.img`
   height: 200px;
   width: 100%;
@@ -61,6 +57,7 @@ export const GoBackBtn = styled.button`
   height: 40px;
   width: 40px; 
   font-size: 20px; 
+  z-index: 10;
 
   ${media.desktop} {
     margin-left: 20px;
@@ -86,12 +83,10 @@ export const DishPrice = styled.h3`
 `;
 
 export const InfoCard = styled.div`
-  height: 190px;
-  padding: 15px 0;
   width: 100%;
-  display: flex; 
-  align-items: center;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;
 
 export const IngredientBox = styled.div`
@@ -99,31 +94,70 @@ export const IngredientBox = styled.div`
   height: 139px;
   background-color: #fefefe; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-  display: flex; 
-  justify-content: center;
-  padding: 10px;
   border-radius: 15px;
-  font-size: 14px;
-  font-weight: 500;
+  display: flex; 
+  flex-flow: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin-right: 10px;
+
+  img{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    margin-bottom: 10px;
+  }
+
+  h5{
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const NutritionBox = styled.div`
   width: 115px;
-  height: 100%;
+  height: 157px;
   background-color: #fefefe; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
   display: flex; 
   justify-content: center;
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 14px;
-  font-weight: 500;
+  flex-flow: wrap;
+  padding: 20px;
+  margin-left: 10px;
+
+  h5{
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+  }
+
+    img{
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    margin-bottom: 10px;
+  }
 `;
 
-export const TotalIngred = styled.p`
-  height: 130px; 
+export const Background = styled.div`
   width: 100%;
-  margin: 10px;
+  padding: 20px;
+  background-color: #fff; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  margin-top: 20px;
 `;
 
 export const Kitchen = styled.p`
@@ -133,15 +167,28 @@ export const Kitchen = styled.p`
 
 export const ContactKitchen = styled.textarea`
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: #fefefe;   
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
   display: flex; 
   justify-content: center;
   padding: 10px;
   margin-top: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   font-style: italic;
+  border: none;
+`;
+
+export const Button = styled.button`
+  width: 50px;
+  height: 30px; 
+  color: #fff;
+  background: #32936F;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin-top: 10px;
+  /* display: flex; */
 `;
 
 export const ButtonArea = styled.div`
