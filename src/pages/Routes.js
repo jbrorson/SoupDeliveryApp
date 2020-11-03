@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation, Route, Switch, useHistory, Redirect } from 'react-router-dom';
+import { useLocation, Route, Switch, Redirect } from 'react-router-dom';
 
 import * as ROUTES from '../components/constants/routes';
 import Menu from './Menu'
@@ -13,22 +13,13 @@ import OrderConfirmation from '../components/confirmation/orderConfirmation';
 import Receipt from '../components/confirmation/receipt';
 import Thankyou from '../components/confirmation/thankyou';
 import Landing from '../components/content/landing';
-// import Soup from '../components/Soups/Soup';
 
-const Routing = ({ menu }) => {
+const Routing = () => {
   const location = useLocation()
-  const history = useHistory()
-  // const transitions = useTransition(location, location => location.pathname, ({
-  //     from: { opacity: .5, transform: `translate3d(${history.action === 'POP' ? '-100%' : '100%'},0,0`, position: 'absolute' },
-  //     enter: { opacity: 1, transform: 'translate3d(0%,0,0', position: 'static' },
-  //     leave: { opacity: .5, transform: `translate3d(${history.action === 'POP' ? '100%' : '-100%'},0,0`, position: 'absolute' },
-  // }))
 
   return (
     <>
       {
-        // transitions.map(({ item: location, props, key }) => (
-        // <div style={props} key={key}>
         <div>
           <Switch location={location}>
             <Route exact path={ROUTES.SOUPLIST} render={() => <Menu menu={SoupList} />} />
