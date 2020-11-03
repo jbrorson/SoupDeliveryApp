@@ -6,8 +6,8 @@ const Order = () => {
 
     <Container>
       <FollowOrder>
-        <Heading>Följ Order</Heading>
-        <p>Lägg till karta</p>
+        <Heading>404</Heading>
+        <p style={{ padding: '20px' }}>Följ order kommer i senare release</p>
       </FollowOrder>
     </Container>
 
